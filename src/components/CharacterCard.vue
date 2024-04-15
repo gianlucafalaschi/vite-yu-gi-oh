@@ -1,6 +1,10 @@
 <script>
 export default {
-    name: 'CharacterCard'
+    name: 'CharacterCard',
+    /* CharacterCard accetta un oggetto che chiamo characterInfo */
+    props: {
+        characterInfo: Object
+    }
 }
 </script>
 
