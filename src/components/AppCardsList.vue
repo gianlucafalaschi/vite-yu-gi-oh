@@ -1,4 +1,5 @@
 <script>
+import { store } from '../store.js';
 import CharacterCard from './CharacterCard.vue';
 
 export default {
@@ -6,7 +7,13 @@ export default {
 
     components: {
         CharacterCard
+    },
+    data() {
+        return{
+            store
+        };
     }
+    
 }
 
 </script>
@@ -15,12 +22,7 @@ export default {
     <section class="ms-cards-wrapper">
         <div class="ms-container  my-5">
             <div class="ms-row bg-white p-3">
-                    <CharacterCard></CharacterCard>
-                    <CharacterCard></CharacterCard>
-                    <CharacterCard></CharacterCard>
-                    <CharacterCard></CharacterCard>
-                    <CharacterCard></CharacterCard>
-                    <CharacterCard></CharacterCard>
+                    <CharacterCard v-for="character in store.characters"></CharacterCard>
             </div>
         </div>
         
