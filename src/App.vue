@@ -18,7 +18,11 @@ import CharacterCard from './components/CharacterCard.vue';
     },
     methods: {
       getCharactersFromApi() {
-        console.log('funziono')
+        // Funzione che prende i personaggi dall'API e popola lo store.js
+        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
+        .then((response) => {
+          store.characters = response.data.data;
+        });
       }
     },
     mounted() {
