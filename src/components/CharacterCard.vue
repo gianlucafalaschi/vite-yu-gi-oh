@@ -14,10 +14,10 @@ export default {
             <img class="img-fluid" src="https://images.ygoprodeck.com/images/cards_small/34541863.jpg" alt="">
         </div>
         <div class="ms-name-container mb-2">
-            <h5 class="mb-0">\"A\" Cell Breeding Device</h5>
+            <h5 class="mb-0">{{characterInfo.name}}</h5>
         </div>
         <div class="ms-archetype-container mb-2">
-            <h6 class="mb-0">Alien</h6>
+            <h6 class="mb-0">{{characterInfo.archetype}}</h6>
         </div>
     </div>
 </template>
