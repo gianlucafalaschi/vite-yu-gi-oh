@@ -22,7 +22,7 @@ export default {
     <section class="ms-cards-wrapper">
         <div class="ms-container  my-5">
             <div class="ms-row bg-white p-3">
-                    <CharacterCard v-for="character in store.characters"></CharacterCard>
+                    <CharacterCard v-for="character in store.characters" :key="character.id"></CharacterCard>
             </div>
         </div>
         
