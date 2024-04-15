@@ -11,7 +11,7 @@ export default {
 <template>
     <div class="ms-character-card">
         <div class="ms-imagine-container mb-2">
-            <img class="img-fluid" src="https://images.ygoprodeck.com/images/cards_small/34541863.jpg" alt="">
+            <img class="img-fluid" src="https://images.ygoprodeck.com/images/cards_small/34541863.jpg" :alt="characterInfo.name">
         </div>
         <div class="ms-name-container mb-2">
             <h5 class="mb-0">{{characterInfo.name}}</h5>
