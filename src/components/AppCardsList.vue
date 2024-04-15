@@ -22,6 +22,7 @@ export default {
     <section class="ms-cards-wrapper">
         <div class="ms-container  my-5">
             <div class="ms-row bg-white p-3">
+                    <div class="ms-cards-top-box"></div>
                     <CharacterCard v-for="character in store.characters" :key="character.id" :characterInfo="character"></CharacterCard>
             </div>
         </div>
@@ -54,6 +55,16 @@ export default {
     
 
 }
+
+.ms-cards-top-box {
+    width: 100%;
+    height: 30px;
+    background-color:#212529;
+    margin: 0 6px;
+}
+
+
+
 
 
 </style>

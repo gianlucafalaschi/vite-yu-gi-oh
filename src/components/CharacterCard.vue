@@ -26,14 +26,22 @@ export default {
 @use'../style/partials/_variables' as *;
 
 .ms-character-card {
-    width: calc((100% / 5) - 12px);
+    width: calc(100%);
     margin: 6px 6px;
     background-color: $brand-primary;
 
+    .ms-imagine-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
     .ms-name-container {
+        width: 100%;
         color: white;
         text-wrap: wrap;
         text-align: center;
+        word-break: break-all;
     }
     .ms-archetype-container {
         color: black;
@@ -42,5 +50,37 @@ export default {
     }
 }
 
+/* MEDIA QUERIES */
+
+/*----------------
+    COLUMNS per XS > 0px
+-----------------*/
+
+
+/*----------------
+    COLUMNS per SM >= 576px
+-----------------*/
+@media screen and (min-width: 576px) {
+
+    .ms-character-card {
+        width: calc((100% / 4) - 12px);
+    }
+
+}
+
+/*----------------
+COLUMNS per MD >= 768px
+-----------------*/
+
+/*----------------
+COLUMNS per LG >= 992px
+-----------------*/
+@media screen and (min-width: 992px) {
+
+    .ms-character-card {
+        width: calc((100% / 5) - 12px );
+    }
+
+}
 
 </style>
