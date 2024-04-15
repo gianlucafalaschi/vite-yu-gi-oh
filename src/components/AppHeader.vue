@@ -27,7 +27,7 @@ export default {
 @use'../style/partials/_variables' as *;
 
 header {
-    background-color: $brand-primary;
+    background-color: $brand-secondary;
     }
 
 .ms-logo-container {
