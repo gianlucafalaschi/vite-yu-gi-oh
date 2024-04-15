@@ -1,11 +1,13 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
-import AppMain from './components/AppMain.vue';
+import AppCardsList from './components/AppCardsList.vue';
+import CharacterCard from './components/CharacterCard.vue';
  
  export default {
     components: {
       AppHeader,
-      AppMain,
+      AppCardsList,
+      CharacterCard,
     }
   }
 
@@ -14,7 +16,7 @@ import AppMain from './components/AppMain.vue';
 <template>
  <AppHeader></AppHeader>
  <main>
-  <AppMain></AppMain>
+  <AppCardsList></AppCardsList>
  </main>
  
 
