@@ -1,4 +1,5 @@
 <script>
+import { store } from './store.js';
 import AppHeader from './components/AppHeader.vue';
 import AppCardsList from './components/AppCardsList.vue';
 import CharacterCard from './components/CharacterCard.vue';
@@ -8,6 +9,19 @@ import CharacterCard from './components/CharacterCard.vue';
       AppHeader,
       AppCardsList,
       CharacterCard,
+    },
+    data() {
+      return {
+        store
+      };
+    },
+    methods: {
+      getCharactersFromApi() {
+        console.log('funziono')
+      }
+    },
+    mounted() {
+      this.getCharactersFromApi();
     }
   }
 
