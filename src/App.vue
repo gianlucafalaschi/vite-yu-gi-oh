@@ -4,12 +4,14 @@ import { store } from './store.js';
 import AppHeader from './components/AppHeader.vue';
 import AppCardsList from './components/AppCardsList.vue';
 import CharacterCard from './components/CharacterCard.vue';
+import AppFilter from './components/AppFilter.vue';
  
  export default {
     components: {
       AppHeader,
       AppCardsList,
       CharacterCard,
+      AppFilter
     },
     data() {
       return {
@@ -43,6 +45,7 @@ import CharacterCard from './components/CharacterCard.vue';
 <template>
  <AppHeader></AppHeader>
  <main>
+  <AppFilter></AppFilter>
   <AppCardsList></AppCardsList>
  </main>
  
