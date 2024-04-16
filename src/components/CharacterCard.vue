@@ -26,7 +26,7 @@ export default {
 @use'../style/partials/_variables' as *;
 
 .ms-character-card {
-    width: calc(100%);
+    width: 100%;
     margin: 6px 6px;
     background-color: $brand-primary;
 
