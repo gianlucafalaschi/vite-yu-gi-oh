@@ -8,8 +8,10 @@
     <section class="filter-box">
         <div class="ms-container">
             <div class="ms-row">
-                <div>
-                    <select class="select-container" name="" id="">Seleziona un archetype</select>
+                <div class="select-box">
+                    <select name="" id="">
+                        <option value="">Seleziona archetype</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -34,6 +36,14 @@
     margin-right: -10px;
     border: 1px dashed black;
     
+    .select-box {
+        padding: 10px;
+
+        select {
+            padding: 4px;
+            border-radius: 5px;
+        }
+    }
 
 }
 
