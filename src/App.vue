@@ -15,34 +15,38 @@ import AppFilter from './components/AppFilter.vue';
     },
     data() {
       return {
-        store
+        store,
+        queryParams: {
+          num: 20,
+          offset: 0
+        }
       };
     },
     methods: {
       getCharactersFromApi() {
         // parametri dell endpoint
-        const queryParams = {
+        /* const queryParams = {
           num: 20,
           offset: 0
-        };
+        }; */
         // Funzione che prende i personaggi dall'API e popola lo store.js
         axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php', {
-          params: queryParams
+          params: this.queryParams
         })
         .then((response) => {
           store.characters = response.data.data;
+          console.log(store.characters);
           // popolo lo store con i dati dell'api'
         });
       },
       getArchetypesFromApi() {
-        // Funzione che prende tutti gli archetypes dall'API e popola lo store.js
         axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
         .then((response) => {
-          console.log('funzione chiamata')
-          //
+          store.archetypes = response.data;
+          console.log(store.archetypes);
           // popolo lo store con i dati dell'api'
         });
-      }
+      } 
     },
     mounted() {
       this.getCharactersFromApi();
