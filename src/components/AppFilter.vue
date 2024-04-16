@@ -17,9 +17,7 @@ export default {
             <div class="ms-row">
                 <div class="select-box">
                     <select name="" id="">
-                        <option value="">Seleziona archetype</option>
-                        <option value="">Alieno</option>
-                        <option value="">Terrestre</option>
+                        <option v-for="archetype in store.archetypes" value="">Seleziona archetype</option>
                     </select>
                 </div>
             </div>
