@@ -18,6 +18,7 @@ export default {
                 <div class="select-box">
                     <select v-model="store.selectedArchetype" name="" id="">
                         <option value="">Select Archetype</option>
+                        <!-- Scelte disponibili -->
                         <option v-for="archetype in store.archetypes" :value="archetype.archetype_name">{{ archetype.archetype_name }}</option>
                     </select>
                 </div>
