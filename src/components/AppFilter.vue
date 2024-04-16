@@ -32,7 +32,7 @@ export default {
     margin: 0 auto;
     padding-left: 10px;
     padding-right: 10px;
-    border: 1px dashed black;
+    
 }
 
 .ms-row {
@@ -41,7 +41,7 @@ export default {
     flex-wrap: wrap;
     margin-left: -10px;
     margin-right: -10px;
-    border: 1px dashed black;
+    
     
     .select-box {
         padding: 10px;
