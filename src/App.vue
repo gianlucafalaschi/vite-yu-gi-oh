@@ -33,10 +33,20 @@ import AppFilter from './components/AppFilter.vue';
           store.characters = response.data.data;
           // popolo lo store con i dati dell'api'
         });
+      },
+      getArchetypesFromApi() {
+        // Funzione che prende tutti gli archetypes dall'API e popola lo store.js
+        axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
+        .then((response) => {
+          console.log('funzione chiamata')
+          //
+          // popolo lo store con i dati dell'api'
+        });
       }
     },
     mounted() {
       this.getCharactersFromApi();
+      this.getArchetypesFromApi();
     }
   }
 
