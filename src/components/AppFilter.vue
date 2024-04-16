@@ -11,6 +11,8 @@
                 <div class="select-box">
                     <select name="" id="">
                         <option value="">Seleziona archetype</option>
+                        <option value="">Alieno</option>
+                        <option value="">Terrestre</option>
                     </select>
                 </div>
             </div>
