@@ -18,8 +18,15 @@ import CharacterCard from './components/CharacterCard.vue';
     },
     methods: {
       getCharactersFromApi() {
+        // parametri dell endpoint
+        const queryParams = {
+          num: 20,
+          offset: 0
+        };
         // Funzione che prende i personaggi dall'API e popola lo store.js
-        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
+        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php', {
+          params: queryParams
+        })
         .then((response) => {
           store.characters = response.data.data;
           // popolo lo store con i dati dell'api'
