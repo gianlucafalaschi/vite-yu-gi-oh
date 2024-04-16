@@ -16,7 +16,8 @@ export default {
         <div class="ms-name-container mb-2">
             <h5 class="mb-0">{{characterInfo.name}}</h5>
         </div>
-        <div class="ms-archetype-container mb-2">
+        <!-- stampo solo se la key archetype c'e' -->
+        <div v-if="characterInfo.archetype" class="ms-archetype-container mb-2">
             <h6 class="mb-0">{{characterInfo.archetype}}</h6>
         </div>
     </div>
