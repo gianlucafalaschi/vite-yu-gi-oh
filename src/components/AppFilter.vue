@@ -1,7 +1,14 @@
 <script>
-    export default {
-        name: 'AppFilter'
+import { store } from '../store.js';
+    
+export default {
+    name: 'AppFilter',
+    data(){
+        return {
+            store
+        };
     }
+}
 </script>
 
 <template>
