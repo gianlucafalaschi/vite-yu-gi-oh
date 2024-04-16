@@ -5,7 +5,8 @@ export default {
     name: 'AppFilter',
     data(){
         return {
-            store
+            store,
+            
         };
     }
 }
