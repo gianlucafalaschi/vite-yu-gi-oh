@@ -16,22 +16,25 @@ import AppFilter from './components/AppFilter.vue';
     data() {
       return {
         store,
-        queryParams: {
-          num: 20,
-          offset: 0
-        }
       };
     },
     methods: {
       getCharactersFromApi() {
+
+        let apiUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php'; 
         // parametri dell endpoint
-        /* const queryParams = {
+        const queryParams = {
           num: 20,
-          offset: 0
-        }; */
+          offset: 0,
+        };
+
+      if(store.selectedArchetype !== '') {
+        queryParams.archetype = store.selectedArchetype;
+        console.log(queryParams);
+      }
         // Funzione che prende i personaggi dall'API e popola lo store.js
-        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php', {
-          params: this.queryParams
+        axios.get(apiUrl, {
+          params: queryParams
         })
         .then((response) => {
           store.characters = response.data.data;
@@ -43,7 +46,6 @@ import AppFilter from './components/AppFilter.vue';
         axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
         .then((response) => {
           store.archetypes = response.data;
-          console.log(store.archetypes);
           // popolo lo store con i dati dell'api'
         });
       } 
