@@ -21,12 +21,12 @@ import AppFilter from './components/AppFilter.vue';
     methods: {
       getCharactersFromApi() {
 
-        let apiUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php'; 
+      let apiUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php'; 
         // parametri dell endpoint
-        const queryParams = {
-          num: 20,
-          offset: 0,
-        };
+      const queryParams = {
+        num: 20,
+        offset: 0,
+      };
 
       if(store.selectedArchetype !== '') {
         queryParams.archetype = store.selectedArchetype;
@@ -38,7 +38,6 @@ import AppFilter from './components/AppFilter.vue';
         })
         .then((response) => {
           store.characters = response.data.data;
-          console.log(store.characters);
           // popolo lo store con i dati dell'api'
         });
       },
