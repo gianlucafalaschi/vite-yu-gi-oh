@@ -17,7 +17,7 @@ export default {
         <div class="ms-container">
             <div class="ms-row">
                 <div class="select-box">
-                    <select v-model="store.selectedArchetype" name="" id="">
+                    <select v-model="store.selectedArchetype" name="" id="" @change="$emit('searchPerformed')">
                         <option value="">Select Archetype</option>
                         <!-- Scelte disponibili -->
                         <option v-for="archetype in store.archetypes" :value="archetype.archetype_name">{{ archetype.archetype_name }}</option>
