@@ -20,7 +20,7 @@ import AppFilter from './components/AppFilter.vue';
     },
     methods: {
       getCharactersFromApi() {
-
+        
       let apiUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php'; 
         // parametri dell endpoint
       const queryParams = {
@@ -60,7 +60,7 @@ import AppFilter from './components/AppFilter.vue';
 <template>
  <AppHeader></AppHeader>
  <main>
-  <AppFilter></AppFilter>
+  <AppFilter @searchPerformed="getCharactersFromApi"></AppFilter>
   <AppCardsList></AppCardsList>
  </main>
  
